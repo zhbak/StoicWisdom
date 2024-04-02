@@ -30,7 +30,7 @@ def image_generator(llm_image, image_desc, style):
     
     prompt = PromptTemplate(
         input_variables=["image_desc"],
-        template= f"Generate a prompt with length less than 950 symbols to generate an image without text and not detailed faces in {style} style based on the following description:" + "{image_desc}.",
+        template= f"Generate a prompt with length less than 950 symbols to generate an image (mustn't contain text and faces) in {style} style based on the following description:" + "{image_desc}.",
     )
     chain = LLMChain(llm=llm_image, prompt=prompt)
     image_url = DallEAPIWrapper(model="dall-e-3").run(chain.run(f"{image_desc}"))
