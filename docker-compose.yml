@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  bot:
+    build: 
+      context: .
+    env_file:
+      - stack.env
+    container_name: sender_bot
