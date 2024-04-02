@@ -34,7 +34,7 @@ def send_message():
 
     image_url = image_generator(llm_image, quote, style)    
 
-    bot.send_photo(-1002026682093, photo=image_url, caption=stoic_message_output, parse_mode="HTML")
+    bot.send_photo(-1001999833879, photo=image_url, caption=stoic_message_output, parse_mode="HTML")
 
 # Schedule the message to be sent every day at 10:00 AM
 schedule.every().day.at("08:00").do(send_message)
