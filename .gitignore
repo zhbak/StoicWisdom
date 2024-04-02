@@ -4,3 +4,4 @@ venv/
 docs/
 quotes_dict raw.py
 test_bot.py
+__pycache__/
