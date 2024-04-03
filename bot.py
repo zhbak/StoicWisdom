@@ -36,10 +36,10 @@ def send_message():
 
     bot.send_photo(-1001999833879, photo=image_url, caption=stoic_message_output, parse_mode="HTML")
 
-# Schedule the message to be sent every day at 10:00 AM
+# Schedule the message to be sent every day at 11:30 AM
 schedule.every().day.at("08:00").do(send_message)
 
 # Main loop
 while True:
     schedule.run_pending()
-    time.sleep(3600)  # Увеличение времени ожидания до 3600 секунд
+    time.sleep(1)  # Увеличение времени ожидания до 1 секунды
