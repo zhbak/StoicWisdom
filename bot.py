@@ -42,4 +42,4 @@ schedule.every().day.at("05:00").do(send_message)
 # Main loop
 while True:
     schedule.run_pending()
-    time.sleep(3600)  # Увеличение времени ожидания до 1 часа
+    time.sleep(30)  # Увеличение времени ожидания до 30 секунд
