@@ -5,4 +5,4 @@ services:
       context: .
     env_file:
       - stack.env
-    container_name: sender_bot
+    container_name: StoicWisdom
