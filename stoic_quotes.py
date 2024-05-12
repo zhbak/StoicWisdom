@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain_community.utilities.dalle_image_generator import DallEAPIWrapper
 import re, random
 
-# Формирует промпт и делает запрос. Возвращает ответ LLM
+# Формирует промпт и делает запрос, возвращает ответ LLM
 def stoic_message(system, user_input, llm):
 
     # system - текст системного промпта
