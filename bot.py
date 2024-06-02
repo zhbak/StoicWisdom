@@ -25,8 +25,8 @@ def send_message():
     user_input = f"Сделай комментарии |comment| о цитате {random_quote}. Если цитата или фрагмент длиннее 4 предложений,\
             то сократи её, вычленив главную мысль не меняя текст с длинной менее 4 предложений.\
             Цитату |quote| переведи на русский. Общая длина ответа должна быть менее 900 знаков. Не заключай цитату в кавычки. Добавь несколько эмоджи среди текста комментария.\
-            Ответ должен иметь вид с разметкой html:\
-             <b>|quote|</b>\n\n<i>–{random_stoic}, {random_book}</i>\n\n<b>Комментарий</b>\n|comment|"
+            Ответ должен иметь вид с разметкой markdownv2:\
+             **|quote|**\n\n__–{random_stoic}, {random_book}__\n\n**Комментарий**\n|comment|"
     
     stoic_message_output = stoic_message(system, user_input, llm_stoic_message)
 
@@ -35,7 +35,7 @@ def send_message():
 
     #image_url = image_generator(llm_image, quote, style)    
 
-    bot.send_message(-1001999833879, text=stoic_message_output, parse_mode="HTML")
+    bot.send_message(-1001999833879, text=stoic_message_output, parse_mode="MarkdownV2")
     #bot.send_photo(-1001999833879, photo=image_url, caption=stoic_message_output, parse_mode="HTML")
 
 # Schedule the message to be sent every day at 05:00 AM UTC
